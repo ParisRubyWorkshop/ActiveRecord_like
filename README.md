@@ -1,4 +1,5 @@
-## Un problème très simple (dans son énoncé !) ou comment faire du rails sans Rails !
+## Un problème très simple (dans son énoncé !) ou 
+### comment faire duraille (oui, j'ai honte !) sans Rails !
 
 imaginez que vous travaillez avec des PORO (Plain Old Ruby Object) comme ceci :
 ```ruby
