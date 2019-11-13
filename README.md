@@ -41,7 +41,8 @@ implication~~ on fait du ~~Canada-~~ DRY (ouh-là là je suis en forme dis-donc 
 dans chaque classe, on ne les définit qu'**une seule fois**, par exemple dans un (ou 2 ! spoiler...) module(s) que vous 
 importerez de la bonne manière, pour avoir une méthode d'instance (:id) ou une méthode de classe (:find) 
   
- [Une bonne adresse](https://blog.eq8.eu/til/metaprogramming-ruby-examples.html) pour faire connaissance avec les joies de la métaprogrammation. Sinon, le livre "Metaprogramming Ruby 2" de Paolo Perrotta est une mine d'or sur Ruby, pour bien comprendre ce langage, illustré de très nombreux exemples de "vrai" code tiré des Gems les plus connues (dont Rails).  
+ [Une bonne adresse](https://blog.eq8.eu/til/metaprogramming-ruby-examples.html) pour faire connaissance avec les joies de la métaprogrammation, ou [encore](https://www.toptal.com/ruby/ruby-metaprogramming-cooler-than-it-sounds). Sinon, le livre "Metaprogramming Ruby 2" de Paolo Perrotta est une mine d'or sur Ruby, pour bien comprendre ce langage, illustré de très nombreux exemples de "vrai" code tiré des Gems les plus connues (dont Rails).  
+ Une excellente référence, pour celles et ceux qui ne connaissent pas cette **oeuvre** et maîtrisent l'anglais, le ["Why's (Poignant) guide to Ruby"](https://poignant.guide/book/chapter-6.html)
  
 <details>
   <summary>Si vous séchez, A ne lire qu'après avoir cherché pendant au moins 5 heures :-)</summary>
@@ -103,8 +104,6 @@ Bien entendu, vous ne devez **pas** coder en dur ces méthodes de recherche, ell
     (toujours) là pour vous aider : la [doc officielle de Ruby](https://ruby-doc.org/core-2.6.5/Module.html) ! A vous de 
     regarder quelle méthode ferait cela.  
     * maintenant qu'on a les noms des méthodes d'instances, on va itérer dessus, en définissant dynamiquement. Des méthodes
-    comme `Module#class_eval`, `Module#define_method` ou `Object#send` peuvent vous être utiles (ou pas, suivant votre 
-    implémentation !)
+    comme `Module#class_eval`, `Module#define_method`, ou `Object#define_singleton_method` et `Object#send` peuvent vous         être utiles (ou pas, suivant votre implémentation !)
 </details>  
   
-Une excellente référence, pour celles et ceux qui ne connaissent pas cette oeuvre et maîtrisent l'anglais, le ["Why's (Poignant) guide to Ruby"](https://poignant.guide/book/chapter-6.html)
