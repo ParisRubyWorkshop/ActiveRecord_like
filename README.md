@@ -103,3 +103,4 @@ Bien entendu, vous ne devez **pas** coder en dur ces méthodes de recherche, ell
     implémentation !)
 </details>  
   
+Une excellente référence, pour celles et ceux qui ne connaissent pas cette oeuvre et maîtrisent l'anglais, le ["Why's (Poignant) guide to Ruby"](https://poignant.guide/book/chapter-6.html)
