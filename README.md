@@ -39,15 +39,19 @@ Bicycle.find(id: 2)
 Bien entendu, ~~si vous-même ou l'un des membres de votre équipe était capturé, le Département d'Etat nierait toute 
 implication~~ on fait du ~~Canada-~~ DRY (ouh-là là je suis en forme dis-donc !), donc pas question de définir ces 2 méthodes 
 dans chaque classe, on ne les définit qu'**une seule fois**, par exemple dans un (ou 2 ! spoiler...) module(s) que vous 
-importerez de la bonne manière, pour avoir une méthode d'instance (:id) ou une méthode de classe (:find)  
+importerez de la bonne manière, pour avoir une méthode d'instance (:id) ou une méthode de classe (:find) 
+  
+ [Une bonne adresse](https://blog.eq8.eu/til/metaprogramming-ruby-examples.html) pour faire connaissance avec les joies de la métaprogrammation. Sinon, le livre "Metaprogramming Ruby 2" de Paolo Perrotta est une mine d'or sur Ruby, pour bien comprendre ce langage, illustré de très nombreux exemples de "vrai" code tiré des Gems les plus connues (dont Rails).  
+ 
 <details>
-  <summary>A ne lire qu'après avoir cherché pendant au moins 5 heures :-)</summary>
+  <summary>Si vous séchez, A ne lire qu'après avoir cherché pendant au moins 5 heures :-)</summary>
   
     * pour commencer, vous pouvez coder ces méthodes directement dans la classe Car, on verra après pour les mettre dans des modules  
     * il y a plusieurs façons de procéder, mais commencez avec des variables de classe (mais si vous connaissez, 
      les @@nom_variable)
     * Maintenant, refactorisez en [virant les variables de classes](https://kakesa.net/blog/ruby-pourquoi-eviter-les-variables-de-classes/)
-    pour les ids, en les remplaçant par des variables d'instance
+    pour les ids, en les remplaçant par des variables d'instance de classe (ben oui, puisque les classes sont aussi des
+    objets, elles peuvent avoir leur variable d'instance (de class)
     * pour la méthode `Car.all` demandez à votre oracle préféré comment connaître toutes les instances d'une classe OU 
     consulter la [doc](https://ruby-doc.org/core-2.6.5/ObjectSpace.html), vu qu'il n'y a que 6 méthodes, trouver la bonne 
     ne devrait pas être trop dur !
@@ -92,7 +96,7 @@ end
 Bien entendu, vous ne devez **pas** coder en dur ces méthodes de recherche, elles doivent etre créer dynamiquement !   
 
 <details>
-  <summary>A ne lire qu'après avoir cherché pendant au moins 5 heures (ce qui fait déjà 10 heures!) :-)</summary>
+  <summary>Si vous séchez, A ne lire qu'après avoir cherché pendant au moins 5 heures (ce qui fait déjà 10 heures!) :-)</summary>
   
     Pour ce faire vous allez avoir besoin de :
     * tout d'abord, il vous faut retrouver les méthodes définies sur chaque classe. Heureusement votre meilleur ami est 
